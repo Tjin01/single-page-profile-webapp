@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    width: 100%;
+    background-color: #82ccdd;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: grid;
+    display: -ms-grid;
+    height: auto;
+    font-family: 'Chakra Petch', sans-serif;
+    width: 95%;
+    max-width: 795px;
+    border-radius: 10px;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    -ms-grid-columns: 200px 15px 1fr 15px 1fr 15px 1fr;
+    grid-template-columns: 200px 1fr 1fr 1fr;
+    -ms-grid-rows: 170px 15px 170px;
+    grid-template-rows: repeat(2, 170px);
+    grid-template-areas: 
+    "navprofile work play study"
+    "navprofile exercise social selfcare";
+    gap: 15px;
+    padding: 15px;
+    overflow: hidden;
+    background-color: #1e272e;
+}
+
+.profile-container {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(1, 2fr 1fr);
+    overflow: hidden;
+    grid-area: navprofile;
+    background-color: #0a3d62;
+    border-radius: 10px;
+}
+
+.sub-container-profile {
+    display:flex;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #6f76c8;
+    border-radius: 0px 0px 6px 6px;
+    position: relative;
+    z-index: 3;
+}
+
+.image {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%; 
+    background-image: url("./media/pexel1.jpeg");
+    background-position: center center;
+    background-size: cover;
+    border: 1px solid #fff;
+}
+
+.sub-container-profile span {
+    font-size: 0.8rem;
+    color: #fff;
+    opacity: 0.9;
+}
+
+.sub-container-profile h2 {
+    width: 100px;
+    font-size: 1.6rem;
+    word-wrap: break-word;
+    color: #fff;
+    opacity: 0.9;
+    letter-spacing: 2px;
+}
+
+.sub-container-timespent {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    position: relative;
+    z-index: 0;
+    padding: 20px;
+}
+
+.sub-container-timespent h2 {
+    font-size: 0.95rem;
+    color: #576574;
+    cursor: pointer;
+    -webkit-transition: color 1s ease-out;
+    -o-transition: color 1s ease-out;
+    transition: color 1s ease-out;
+}
+
+.sub-container-timespent h2:hover {
+    color: #fff;
+    opacity: 0.6;
+    -webkit-transition: color 500ms ease-in;
+    -o-transition: color 500ms ease-in;
+    transition: color 500ms ease-in;
+}  
+
+.work-container, .play-container, .study-container, .social-container, .selfcare-container, .exercise-container{
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: none;
+    border-radius: 10px;
+}
+
+.work, .play, .study, .exercise,.social,.selfcare{
+    margin-top: 35px;
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+    justify-content: space-around;
+    border-radius: 10px 10px 5px 5px;
+    -webkit-box-flex: 3;
+    -webkit-flex: 3;
+        -ms-flex: 3;
+    flex: 3;
+    background-color: #0a3d62;
+    padding: 20px;
+}
+
+.work:hover, .play:hover,.study:hover,.exercise:hover,.social:hover,.selfcare:hover{
+    background-color: #0a3d62;;
+    opacity: 0.95;
+    cursor: pointer;
+}
+
+.workbox1, .playbox1, .studybox1, .exercisebox1, .socialbox1, .selfcarebox1 {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.workbox1 p, .playbox1 p, .studybox1 p, .exercisebox1 p, .socialbox1 p, .selfcarebox1 p {
+   color: #fff;
+   opacity: 0.6;
+}
+
+.workbox2 h2, .playbox2 h2, .studybox2 h2, .exercisebox2 h2, .socialbox2 h2, .selfcarebox2 h2 {
+    color: #fff;
+    opacity: 0.6;
+    font-size: 1.2rem;
+ }
+
+
+ .workbox2 span, .playbox2 span, .studybox2 span, .exercisebox2 span, .socialbox2 span, .selfcarebox2 span {
+    color: #fff;
+    opacity: 0.6;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+ }
+
+.work-container{
+    grid-area: work;
+    background-color: #ffbe76;
+}
+
+.play-container {
+    grid-area: play;
+    background-color: #48dbfb;
+}
+
+.study-container {
+    grid-area: study;
+    background-color: #ff7979;
+}
+
+
+.exercise-container {
+    grid-area: exercise;
+    background-color: #78e08f;
+}
+
+.social-container {
+    grid-area: social;
+    background-color: #a29bfe;
+}
+
+
+.selfcare-container{
+    grid-area: selfcare;
+    background-color: #f6e58d;
+}
+
+
+@media screen and (max-width: 57rem) {
+#app {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7, 180px);
+        grid-template-areas: 
+        "navprofile"
+        "work"
+        "play"
+        "study"
+        "exercise"
+        "social"
+        "selfcare";
+    }
+
+.sub-container-profile {
+        display:flex;
+        display:-webkit-box;
+        display:-webkit-flex;
+        display:-ms-flexbox;
+        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+        justify-content: space-evenly;
+        -webkit-box-pack: space-evenly;
+        -webkit-justify-content: space-evenly;
+            -ms-flex-pack: space-evenly;
+        padding: 1.5rem;
+}
+
+.sub-container-profile h2 {
+    font-size: 1.1rem;
+}
+
+.workbox2, .playbox2, .studybox2, .exercisebox2, .socialbox2, .selfcarebox2{
+   display: flex;
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   flex-direction: row;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+   -webkit-flex-direction: row;
+       -ms-flex-direction: row;
+           flex-direction: row;
+           -webkit-box-pack: justify;
+           -webkit-justify-content: space-between;
+               -ms-flex-pack: justify;
+   justify-content: space-between;
+}
+
+.sub-container-timespent {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+        flex-direction: row;
+    }
+    .profile-container {
+        grid-area: navprofile;
+    }
+    
+    .track-container {
+        grid-area: timetracker;
+    }
+    
+    .work-container {
+        grid-area: work;
+    }
+    
+    .play-container {
+        grid-area: play;
+    }
+    
+    .study-container {
+        grid-area: study;
+    }
+    
+    .exercise-container {
+        grid-area: exercise;
+    }
+    
+    .social-container {
+        grid-area: social;
+    }
+
+    .selfcare-container {
+        grid-area: selfcare;
+    }
+}
+
